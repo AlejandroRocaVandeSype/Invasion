@@ -1,0 +1,13 @@
+[objects]
+main.o
+mundo.o
+entidad.o
+player.o
+bala.o
+enemigo.o
+enemigoAv.o
+puerta.o
+llave.o
+vidas.o
+contadorTiempo.o
+cristal.o
