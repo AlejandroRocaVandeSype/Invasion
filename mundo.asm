@@ -246,13 +246,13 @@ cargarSAT:
 ;---------------------------------------------------------------------------
 cargaAssetsSprite:
 	
-	; CARGA DE LA PALETA DE COLORES PARA LOS SPRITES
-	ld hl, $c010 							; Copiamos en la 2º paleta para los sprites. color bank 2, color 0 (sprites).
-	call prepararVDP						; Enviamos la direcc y orden a realizar al puerto de control del VDP.
+	; LOAD OF THE SPRITE COLOR PALETTE
+	ld hl, $c010 							; Copy the color bank 2, color 0 (sprites).
+	call prepararVDP						; Send address and order to the VDP
 
-	ld hl,PaletaSprite  					; Hl = Puntero a inicio datos paleta				
-	ld b,(PaletaSpriteEnd-PaletaSprite)  	; B = Tam en bytes de la paleta
-	call cargaPaleta 						; Copiamos la paleta de colores de los sprites en CRAM
+	ld hl,PaletaSprite  					; Hl = Pointer to where the data of the palette is 			
+	ld b,(PaletaSpriteEnd-PaletaSprite)  	; B = Size in bytes of the palette
+	call cargaPaleta 						; Copy the color palette of the sprites to the CRAM
 
     ;CARGA DE LOS TILES DEL PLAYER
     ld hl, $2000 							; ; HL = 2000. Primer tile, indice 256. Vamos a guardar los tiles de los sprites en esta direcc

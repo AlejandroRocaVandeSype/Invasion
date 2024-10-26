@@ -1,0 +1,1 @@
+None of the sprite resources was made by me. All of them were gathered for free from the https://www.spriters-resource.com/.
